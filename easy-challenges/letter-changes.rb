@@ -23,12 +23,12 @@ end
 
 puts LetterChanges("Hello");
 
-  
+# second solution
 
 def LetterChanges(str)
 
     # code goes here
-    alphabets = ["a","b","c","d","e","f","g","h","i","j","k","l","m","n","o","p","q","r","s","t","u","v","w","x","y","z"]
+    alphabets = ("a".."z").to_a
     vowels = ["a","e","i","o","u"]
     new_str = ""
     mod_str = ""
