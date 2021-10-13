@@ -13,7 +13,32 @@ def FirstReverse(string)
         arrayOfStrings << string[n]
         n -= 1
     end
-    puts arrayOfStrings.join()
+    arrayOfStrings.join()
 end
 
-FirstReverse("hello world");
+puts FirstReverse("hello world");
+
+# second solution
+def FirstReverse2(str)
+    return str.reverse
+end
+puts FirstReverse2("hello world")
+
+# 3- solution
+def FirstReverse3(str)
+    str.chars.reverse.join
+end
+puts FirstReverse3("hello world")
+
+def FirstReverse4(str)
+    i = 0
+    j = str.size - 1
+  
+    while i < j
+     str[i], str[j] = str[j], str[i]
+     i += 1
+     j -= 1
+    end
+    return str
+end
+puts FirstReverse4("hello world")
