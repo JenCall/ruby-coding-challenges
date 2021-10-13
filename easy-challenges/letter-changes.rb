@@ -7,7 +7,46 @@
 # and finally return this modified string.
 
 def LetterChanges(str)
-    
+    alpha = ("a".."z").to_a
+    array_letters = str.downcase.split("")
+    new_array = array_letters.map do |letter|
+        if letter =~ /[a-z]/
+            index = alpha.index(letter)
+            letter = (letter == "z") ? "a" : alpha[index + 1]
+            letter = letter.upcase if letter =~ /[aeiou]/
+            letter
+        else
+            letter
+        end
+    end.join
 end
 
-puts LetterChanges("Hello")
+puts LetterChanges("Hello");
+
+  
+
+def LetterChanges(str)
+
+    # code goes here
+    alphabets = ["a","b","c","d","e","f","g","h","i","j","k","l","m","n","o","p","q","r","s","t","u","v","w","x","y","z"]
+    vowels = ["a","e","i","o","u"]
+    new_str = ""
+    mod_str = ""
+    for i in 0..str.length-1
+     if alphabets.include?(str[i])
+          new_str << alphabets[alphabets.index(str[i]) -(alphabets.length-1)]
+     else
+         new_str << str[i]
+     end
+    end
+    
+    for i in 0..new_str.length-1
+      if vowels.include?(new_str[i])
+          mod_str << new_str[i].upcase
+      else
+          mod_str << new_str[i]
+      end
+    end
+    return mod_str 
+           
+  end
