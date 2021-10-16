@@ -15,7 +15,7 @@ def longest(a1, a2)
   a1.each { |i| 
     unless new_word.include?(i) 
         new_word << i 
-    end }
+    end }   
 
   a2.each { |j|
     unless new_word.include?(j)
@@ -42,3 +42,11 @@ def longest(a1, a2)
 end
 
 # methods
+
+# string → chars
+# chars → an_array
+# Returns an array of characters in str. This is a shorthand for str.each_char.to_a.
+# If a block is given, which is a deprecated form, works the same as each_char.
+
+# array → uniq
+# With the uniq method you can remove ALL the duplicate elements from an array.
