@@ -3,7 +3,7 @@ def longest(a1, a2)
   a1 = a1.split("")
   a2 = a2.split("")
   new_word = ""
-  
+
   a1.each { |i| 
     unless new_word.include?(i) 
         new_word << i 
@@ -18,3 +18,19 @@ def longest(a1, a2)
 end
 
 p longest("hello","hola")
+
+# other solutions
+def longest(a1, a2)
+    a = a1 + a2
+    a.split('').uniq.sort.join
+end
+
+def longest(a1, a2)
+    (a1.chars | a2.chars).sort.join
+end
+
+def longest(a1, a2)
+    (a1+a2).chars.sort.uniq.join
+end
+
+# methods
