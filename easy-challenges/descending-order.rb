@@ -14,3 +14,23 @@ def descending_order(n)
 end
 
 descending_order(3784569)
+
+# second solution
+def descending_order_1(n)
+    n.to_s.chars.sort.reverse.join.to_i
+end
+
+# 3. solution
+def descending_order(n)
+    n.digits.sort.reverse.join.to_i
+end
+
+# 4. solution
+def descending_order(n)
+    n.to_s.split("").sort { |x,y| y <=> x }.join.to_i
+end
+
+# 5. solution
+def descending_order(n)
+    n.to_s.split('').sort.reverse.join.to_i
+end
