@@ -10,5 +10,20 @@
 # curly braces: ()[]{}.
 
 def validBraces(braces)
-    # TODO
+    opens = ["(", "[","{"]
+    closes = [")", "]","}"]
+    hash_of_symbols = { "(" => 1, ")" => 2, "[" => 3, "]" => 4,  "{" => 5, "}" => 6 }
+    braces = braces.split("")
+    if braces.length % 2 == 0
+        braces.each do |i| 
+            if hash_of_symbols.include?(i)
+                values << hash_of_symbols[i]
+            end
+        end
+        p values
+    else
+        false
+    end
 end
+
+validBraces("([)")
