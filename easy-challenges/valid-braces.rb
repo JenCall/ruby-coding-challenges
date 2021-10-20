@@ -9,6 +9,23 @@
 # All input strings will be nonempty, and will only consist of parentheses, brackets and 
 # curly braces: ()[]{}.
 
+# clever solution
+def validBraces1 braces, *check_set
+    braces_set = { "(" => ")", "{" => "}", "[" => "]" }
+    # p s.class -> is a string
+    # p a.class -> is an array - seems to be converted at *a
+    braces.split("").each do |brace|
+        if braces_set[brace]
+            check_set << brace
+        else
+            return false if braces_set[check_set.pop] != brace
+        end
+    end
+    check_set.empty?
+end
+
+p validBraces1("{()}")
+
 # first try
 def validBraces(braces)
     hash_of_symbols = { "(" => 2, ")" => 2, "[" => 3, "]" => 3,  "{" => 4, "}" => 4 }
@@ -29,32 +46,9 @@ def validBraces(braces)
         false
     end
 end
-validBraces("[]{}()")
-
-# clever solution
-def validBraces1 braces, *a
-    braces_set = { "(" => ")", "{" => "}", "[" => "]" }
-    # p s.class -> is a string
-    # p a.class -> is an array - seems to be converted at *a
-    braces.split("").each do |brace|
-        if braces_set[brace]
-            a << brace
-            p a
-        else
-            p a.pop
-            # braces_set[a.pop]
-            return false if braces_set[a.pop] != brace
-        end
-    end
-    p a
-    a.empty?
-end
-
-p validBraces1("{()}")
 
 # shorter solution
 def validBraces2(braces)
     while braces.gsub!(/\{\}|\[\]|\(\)/, ''); end
     braces.empty?
 end
-validBraces2("[]{}()")
