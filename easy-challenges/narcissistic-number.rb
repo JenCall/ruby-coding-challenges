@@ -5,7 +5,14 @@
 # we will restrict ourselves to decimal (base 10). --> must return true or false.
 
 def narcissistic?(value)
-    # Code me to return true or false
+    values = value.to_s.split(//)
+    digits_size = values.length
+    numbers = [1,2,3,4,5,6,7,8,9,10]
+    sum = 0
+    values.each do |i|
+        sum += i.to_i ** digits_size
+    end
+    value == sum ? true : false
 end
 
-p narcissistic?(value)
+p narcissistic?(5)
