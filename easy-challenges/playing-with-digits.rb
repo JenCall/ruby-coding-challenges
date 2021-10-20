@@ -22,5 +22,27 @@ def dig_pow(n, p)
     }
     sum % n != 0 ? -1 : sum / n
 end
-
 p dig_pow(695, 2)
+
+# additional solution
+def dig_pow1(n, p)
+    sum=0
+    digits = n.to_s.split('').map { |digit| digit.to_i }.each  do |i|
+    sum += i ** (p)
+        p+=1
+    end
+    sum%n == 0 ? k=sum / n : k=-1
+    return k
+end
+p dig_pow(695, 2)
+
+def dig_pow(n, p)
+    total = n.to_s.split('').map.with_index{|d, i| d.to_i ** (p+i)}.reduce(:+)
+    total % n == 0 ? (total / n) : -1
+end
+
+def dig_pow(n, p)
+    sum = n.digits.reverse.each_with_index.sum{ |d, i| d ** (p + i) }
+    
+    sum % n == 0 ? sum / n : -1
+end
