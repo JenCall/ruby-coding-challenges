@@ -10,6 +10,21 @@ def find_uniq(arr)
     arr.sort!
     arr[0] == arr[1] ? arr[-1] : arr[0]
 end
-
 p find_uniq([3, 3, 1, 3, 3, 3, 3, 3])
-# find-the-unique-number.rb
+
+# more solutions
+def find_uniq(arr)
+    arr.uniq.find { |n| arr.count(n) == 1 }
+end
+
+def find_uniq(arr)
+    arr.uniq.detect { |number| arr.count(number) == 1 }
+end
+
+def find_uniq(arr)
+    arr.group_by(&:itself).values.min_by(&:length).first
+end
+
+def find_uniq arr
+    arr.find.with_index{|n, i| n != arr[i-1] && n != arr[i+1]}
+end
