@@ -59,6 +59,14 @@ def sort_array(arr)
     arr.map{|m| m.odd? ? odds.shift : m}
 end
 
+def sort_array(a)
+    odds = a.select { |x| x.odd? }.sort
+  
+    a.map do |el|
+      el.odd? ? odds.shift : el
+    end
+end
+
 # Methods
 
 # shift -> 
