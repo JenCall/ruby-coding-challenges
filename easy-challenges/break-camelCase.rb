@@ -6,6 +6,7 @@
 # "identifier"   =>  "identifier"
 # ""             =>  ""
 
+
 def solution(string)
     # complete the function
     new_string = []
