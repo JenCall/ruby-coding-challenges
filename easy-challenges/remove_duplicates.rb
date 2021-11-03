@@ -1,14 +1,13 @@
+
 def remove_duplicates(nums)
     return 0 if nums.empty?
     index = 0
     j = 1
-    
     while j < nums.length        
         nums[index] == nums[j] ? nums[j] = nil : index = j
         j += 1
     end
-    
-   p nums.compact!
+    nums.compact!
     nums.length
 end
 
