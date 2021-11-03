@@ -17,3 +17,10 @@ end
 # end
 
 p remove_duplicates([1,2,2,2,3,5,5,5])
+
+# Complexity analysis
+
+# Time complextiy: O(n). Assume that n is the length of array. 
+# Each of i and j traverses at most n steps.
+
+# Space complexity : O(1).
