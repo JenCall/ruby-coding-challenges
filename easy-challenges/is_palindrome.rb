@@ -8,10 +8,9 @@ def is_palindrome(string)
     j = string.length
     i = 0
     while i < j
-        strin[j]
+        string[j-1]
+        j =-1
     end
-    
-
 end
 
 p is_palindrome("hello")
