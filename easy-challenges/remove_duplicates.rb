@@ -1,9 +1,20 @@
 def remove_duplicates(nums)
-    nums.each_with_index do |i, index|
-        if i == i[index + 1]
-            p true
-        end
-    end 
+    return 0 if nums.empty?
+    index = 0
+    j = 1
+    
+    while j < nums.length        
+        nums[index] == nums[j] ? nums[j] = nil : index = j
+        j += 1
+    end
+    
+   p nums.compact!
+    nums.length
 end
 
-remove_duplicates([1,1,2])
+# def remove_duplicates(nums)
+#     new = nums.uniq!
+#     new.length
+# end
+
+p remove_duplicates([1,2,2,2,3,5,5,5])
