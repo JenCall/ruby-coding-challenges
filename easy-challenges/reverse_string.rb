@@ -10,8 +10,8 @@ def reverse_string(string)
     new_str
 end
 
-def reverse_string(s)
-    s.reverse
-end
+# def reverse_string(s)
+#     s.reverse!
+# end
 
 p reverse_string("hello")
