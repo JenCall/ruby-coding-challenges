@@ -16,3 +16,6 @@ def is_subsequence(s, t)
 end
 
 p is_subsequence("abc","anvbfd")
+
+# Runtime: 52 ms, faster than 89.36% of Ruby online submissions for Is Subsequence.
+# Memory Usage: 210.1 MB, less than 36.17% of Ruby online submissions for Is Subsequence.
