@@ -13,3 +13,5 @@ def is_subsequence(s, t)
     end
     return s_index == s.length
 end
+
+p is_subsequence("abc","anvbfcd")
