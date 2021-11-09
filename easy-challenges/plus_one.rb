@@ -4,3 +4,9 @@
 # does not contain any leading 0's. Increment the large integer by one and return 
 # the resulting array of digits.
 # 09/11/2021 - LeetCode
+
+def plus_one(digits)
+   (digits.join.to_i + 1).to_s.split("").map(&:to_i)
+end
+
+p plus_one([1,2,3,4])
