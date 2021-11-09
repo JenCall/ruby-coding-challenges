@@ -5,6 +5,7 @@
 # the resulting array of digits.
 # 09/11/2021 - LeetCode
 
+# First solution
 def plus_one(digits)
    (digits.join.to_i + 1).to_s.split("").map(&:to_i)
 end
