@@ -3,7 +3,7 @@
 # sorting the input array, returns a sorted array of the three largest numbers
 # in the input array
 
-#First solution
+#First solution O(n)
 def three_largest_number(nums)
     threeLargest = [1, 1, 1]
     nums.each do |n|
