@@ -17,4 +17,14 @@ def move_zeroes(nums)
     nums
 end
 
+# Second solution
+def move_zeroes(nums)
+    total = nums.count(0)
+    nums.delete(0)
+    total.times do
+      nums << 0
+    end
+    nums
+  end
+
 p move_zeroes([0,1,0,2,3,5])
