@@ -9,3 +9,9 @@ def is_power_of_three(n)
 
     is_power_of_three(n / 3) # now check the number divided per 3 will be true if 3 or 1 
 end
+
+# Math solution 
+def is_power_of_three(n)
+    return false if n <= 0
+    3 ** (Math.log(n+1) / Math.log(3)).to_int == n
+end
