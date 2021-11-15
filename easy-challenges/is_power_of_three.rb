@@ -15,3 +15,16 @@ def is_power_of_three(n)
     return false if n <= 0
     3 ** (Math.log(n+1) / Math.log(3)).to_int == n
 end
+
+# Easiest solution for me --while--
+def is_power_of_three(n)
+    return false if n == 0 
+    return true if n == 1
+    base = 3
+    
+    while base <= n
+        return true if value == n 
+        base = base * 3
+    end
+    false
+end
